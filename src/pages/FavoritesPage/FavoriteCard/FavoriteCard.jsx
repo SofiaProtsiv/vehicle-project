@@ -89,14 +89,7 @@ const FavoriteCard = ({ vehicle }) => {
           <p className={cl.description}>{formatDescription()}</p>
         </div>
         <ul className={cl["details-list"]}>
-          {Object.entries(details).map(([key, value], index) => {
-            if (
-              (screenWidth < 768 && index >= 6) ||
-              (screenWidth >= 1440 && index >= 8)
-            ) {
-              return null;
-            }
-
+          {Object.entries(details).map(([key, value]) => {
             if (value && key !== "bathroom") {
               return (
                 <Button
@@ -112,6 +105,8 @@ const FavoriteCard = ({ vehicle }) => {
                 </Button>
               );
             }
+
+            return null;
           })}
         </ul>
         <Button className="btn-loadmore" type="button" tag="button">
