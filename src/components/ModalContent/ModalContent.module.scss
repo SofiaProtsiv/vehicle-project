@@ -1,0 +1,145 @@
+.backdrop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--backdrop-bg);
+  z-index: 99999;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72.5%;
+  height: 720px;
+  background-color: var(--white-color);
+  border-radius: 40px;
+  padding: 40px;
+  max-width: 982px;
+  overflow-y: scroll;
+  z-index: 999;
+}
+
+.active {
+  color: var(--accent-color);
+}
+
+.close-btn {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background-color: transparent;
+  border: none;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+}
+.info-wrapper {
+  display: flex;
+  gap: 16px;
+
+  flex-direction: column-reverse;
+  @media (768px<=width) {
+    flex-direction: row;
+  }
+}
+
+.rating {
+  display: flex;
+  gap: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  cursor: pointer;
+  & span {
+    border-bottom: 1px solid var(--primary-text-color);
+  }
+  & svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+.reviews-number {
+}
+
+.location {
+  display: flex;
+  gap: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+
+  & svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.price {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.gallery-list {
+  display: flex;
+  gap: 16px;
+  overflow-x: scroll;
+  margin-bottom: 24px;
+}
+
+.gallery-item {
+  width: 310px;
+  height: 290px;
+  object-fit: none;
+  border-radius: 10px;
+}
+
+.description {
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  margin-bottom: 44px;
+}
+
+.links-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  border-bottom: 1px solid #10182820;
+}
+
+.link {
+  position: relative;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.25;
+  padding-bottom: 24px;
+
+  &.active::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 5px;
+    width: 100%;
+    display: block;
+    background-color: var(--accent-color);
+    border-radius: 4px;
+  }
+}
