@@ -67,7 +67,8 @@ const ModalContent = () => {
       document.removeEventListener("keydown", handleEscKeyPress);
       document.removeEventListener("click", handleBackdropClick);
     };
-  }, [handleBackdropClick, handleEscKeyPress]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   if (isFetching) {
     return <p>Loading...</p>;
