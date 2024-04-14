@@ -1,13 +1,35 @@
 {
   "files": {
-    "main.css": "/vehicle-project/static/css/main.7acaea2f.css",
-    "main.js": "/vehicle-project/static/js/main.07d3183d.js",
+    "main.css": "/vehicle-project/static/css/main.25a7fe1b.css",
+    "main.js": "/vehicle-project/static/js/main.dd536ee6.js",
+    "static/js/35.724d7214.chunk.js": "/vehicle-project/static/js/35.724d7214.chunk.js",
+    "static/css/198.7e9649bf.chunk.css": "/vehicle-project/static/css/198.7e9649bf.chunk.css",
+    "static/js/198.890f1850.chunk.js": "/vehicle-project/static/js/198.890f1850.chunk.js",
+    "static/css/572.daee9266.chunk.css": "/vehicle-project/static/css/572.daee9266.chunk.css",
+    "static/js/572.b86b15ef.chunk.js": "/vehicle-project/static/js/572.b86b15ef.chunk.js",
+    "static/css/908.7ca0016a.chunk.css": "/vehicle-project/static/css/908.7ca0016a.chunk.css",
+    "static/js/908.6a475f21.chunk.js": "/vehicle-project/static/js/908.6a475f21.chunk.js",
+    "static/css/762.ad06a62b.chunk.css": "/vehicle-project/static/css/762.ad06a62b.chunk.css",
+    "static/js/762.ed70c545.chunk.js": "/vehicle-project/static/js/762.ed70c545.chunk.js",
+    "static/js/252.8a9897f2.chunk.js": "/vehicle-project/static/js/252.8a9897f2.chunk.js",
+    "static/js/124.1e5e9439.chunk.js": "/vehicle-project/static/js/124.1e5e9439.chunk.js",
     "index.html": "/vehicle-project/index.html",
-    "main.7acaea2f.css.map": "/vehicle-project/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/vehicle-project/static/js/main.07d3183d.js.map"
+    "main.25a7fe1b.css.map": "/vehicle-project/static/css/main.25a7fe1b.css.map",
+    "main.dd536ee6.js.map": "/vehicle-project/static/js/main.dd536ee6.js.map",
+    "35.724d7214.chunk.js.map": "/vehicle-project/static/js/35.724d7214.chunk.js.map",
+    "198.7e9649bf.chunk.css.map": "/vehicle-project/static/css/198.7e9649bf.chunk.css.map",
+    "198.890f1850.chunk.js.map": "/vehicle-project/static/js/198.890f1850.chunk.js.map",
+    "572.daee9266.chunk.css.map": "/vehicle-project/static/css/572.daee9266.chunk.css.map",
+    "572.b86b15ef.chunk.js.map": "/vehicle-project/static/js/572.b86b15ef.chunk.js.map",
+    "908.7ca0016a.chunk.css.map": "/vehicle-project/static/css/908.7ca0016a.chunk.css.map",
+    "908.6a475f21.chunk.js.map": "/vehicle-project/static/js/908.6a475f21.chunk.js.map",
+    "762.ad06a62b.chunk.css.map": "/vehicle-project/static/css/762.ad06a62b.chunk.css.map",
+    "762.ed70c545.chunk.js.map": "/vehicle-project/static/js/762.ed70c545.chunk.js.map",
+    "252.8a9897f2.chunk.js.map": "/vehicle-project/static/js/252.8a9897f2.chunk.js.map",
+    "124.1e5e9439.chunk.js.map": "/vehicle-project/static/js/124.1e5e9439.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.25a7fe1b.css",
+    "static/js/main.dd536ee6.js"
   ]
 }

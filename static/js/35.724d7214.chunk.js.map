@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/35.724d7214.chunk.js","mappings":"gLAIA,EAJiB,WACf,OAAOA,EAAAA,EAAAA,KAAA,MAAAC,SAAI,mBACb,C","sources":["pages/HomePage/HomePage.jsx"],"sourcesContent":["const HomePage = function () {\n  return <h1>The Camper Rent</h1>;\n};\n\nexport default HomePage;\n"],"names":["_jsx","children"],"sourceRoot":""}
