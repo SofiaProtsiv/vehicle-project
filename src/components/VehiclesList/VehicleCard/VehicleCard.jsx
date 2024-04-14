@@ -112,6 +112,8 @@ const VehicleCard = ({ vehicle }) => {
                 </Button>
               );
             }
+
+            return null;
           })}
         </ul>
         <Button className="btn-loadmore" type="button" tag="button">

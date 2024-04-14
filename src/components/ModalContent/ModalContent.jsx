@@ -67,7 +67,7 @@ const ModalContent = () => {
       document.removeEventListener("keydown", handleEscKeyPress);
       document.removeEventListener("click", handleBackdropClick);
     };
-  }, []);
+  }, [handleBackdropClick, handleEscKeyPress]);
 
   if (isFetching) {
     return <p>Loading...</p>;

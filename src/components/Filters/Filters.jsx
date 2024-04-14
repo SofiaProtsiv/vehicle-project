@@ -36,6 +36,7 @@ const Filters = function () {
     });
 
     setSelectedFilters(updatedFilters);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
 
   const handleFilterChange = (filterKey, value, isChecked) => {
