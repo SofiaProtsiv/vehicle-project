@@ -5,7 +5,7 @@ import LocationFilter from "./LocationFilter";
 import EquipmentFilter from "./EquipmentFilter";
 import VenicleType from "./VenicleType";
 import Button from "components/UI/Button/Button";
-
+import { LIMIT } from "assets/constants";
 import cl from "./Filters.module.scss";
 
 const INITIAL_FILTERS = {
@@ -16,7 +16,7 @@ const INITIAL_FILTERS = {
   bathroom: "",
   kitchen: "",
   TV: "",
-  limit: 10,
+  limit: LIMIT,
   page: 1,
 };
 

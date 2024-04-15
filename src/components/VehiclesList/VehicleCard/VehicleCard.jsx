@@ -64,7 +64,7 @@ const VehicleCard = ({ vehicle }) => {
           <div className={cl["info-wrapper-top"]}>
             <h3 className={cl.name}>{name}</h3>
             <div className={cl.wrapper}>
-              <p className={cl.price}>€{price}</p>
+              <p className={cl.price}>€{price.toFixed(2)}</p>
               <button className={cl["fav-btn"]} onClick={handleFavoriteToggle}>
                 <Icon id={isProductInFavorites ? "heart-active" : "heart"} />
               </button>

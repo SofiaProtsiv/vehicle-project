@@ -62,5 +62,5 @@ export const VEHICLE_DETAILS = [
   "tank",
   "consumption",
 ];
-export const LIMIT = 10;
+export const LIMIT = 4;
 
