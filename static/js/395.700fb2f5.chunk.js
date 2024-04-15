@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkvehicle_project=self.webpackChunkvehicle_project||[]).push([[395],{5395:function(e,c,n){n.r(c),n.d(c,{default:function(){return i}});var t="HomePage_section__QO2n7",s="HomePage_content-wrapper__hFNFw",a="HomePage_title__ygULj",r=n(184),i=function(){return(0,r.jsx)("section",{className:t,children:(0,r.jsx)("div",{className:s,children:(0,r.jsx)("h1",{className:a,children:"The Camper Rent"})})})}}}]);
+//# sourceMappingURL=395.700fb2f5.chunk.js.map
