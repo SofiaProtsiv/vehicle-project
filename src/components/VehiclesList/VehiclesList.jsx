@@ -1,6 +1,7 @@
 import { useGetVehiclesQuery } from "../../redux/vehicles";
 import { useStateContext } from "../../context/StateContext";
 import VehicleCard from "./VehicleCard";
+import Loader from "components/UI/Loader";
 import Pagination from "components/UI/Pagination";
 import cl from "./VehiclesList.module.scss";
 
@@ -12,7 +13,11 @@ const VehiclesList = function () {
     useGetVehiclesQuery(params);
 
   if (isFetching) {
-    return <p>Loading</p>;
+    return (
+      <ul className={cl["vehicles-list"]}>
+        <Loader />
+      </ul>
+    );
   }
 
   if (isSuccess) {
@@ -36,7 +41,11 @@ const VehiclesList = function () {
   }
 
   if (isError) {
-    return <p>{error.error}</p>;
+    return (
+      <ul className={cl["vehicles-list"]}>
+        <p>{error.error}</p>
+      </ul>
+    );
   }
 };
 

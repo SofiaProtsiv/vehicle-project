@@ -5,12 +5,14 @@ import cl from "./CatalogPage.module.scss";
 
 const CatalogPage = function () {
   return (
-    <div className={cl["catalog-container"]}>
-      <Filters />
-      <VehiclesList />
+    <section className={cl.section}>
+      <div className={cl["catalog-container"]}>
+        <Filters />
+        <VehiclesList />
 
-      <Outlet />
-    </div>
+        <Outlet />
+      </div>
+    </section>
   );
 };
 

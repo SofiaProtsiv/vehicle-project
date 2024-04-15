@@ -10,10 +10,13 @@ import {
 } from "react-router-dom";
 import { useGetVehicleByIdQuery } from "../../redux/vehicles";
 import Icon from "components/UI/Icon";
+import Loader from "components/UI/Loader";
+import handleScrollToSection from "assets/helpers/handleScrollToSection";
 import cl from "./ModalContent.module.scss";
 
 const ModalContent = () => {
   const { id } = useParams();
+
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -24,18 +27,6 @@ const ModalContent = () => {
     isSuccess,
     error,
   } = useGetVehicleByIdQuery(id);
-
-  const handleScrollToSection = () => {
-    const element = document.querySelector(`[data-vehicle='${id}']`);
-
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest",
-      });
-    }
-  };
 
   const handleCloseModal = () => {
     navigate(
@@ -71,7 +62,7 @@ const ModalContent = () => {
   }, []);
 
   if (isFetching) {
-    return <p>Loading...</p>;
+    return <Loader />;
   }
 
   if (isSuccess) {
@@ -79,67 +70,69 @@ const ModalContent = () => {
       vehicleDetails;
     return createPortal(
       <div className={cl.backdrop}>
-        <div className={cl["modal-content"]}>
-          <button className={cl["close-btn"]} onClick={handleCloseModal}>
-            <Icon id="close" />
-          </button>
+        <div className={cl.wrapper}>
+          <div className={cl["modal-content"]}>
+            <button className={cl["close-btn"]} onClick={handleCloseModal}>
+              <Icon id="close" />
+            </button>
 
-          <div className={cl["content-wrapper"]}>
-            <h3 className={cl.name}>{name}</h3>
-            <div className={cl["info-wrapper"]}>
-              <p className={cl.rating}>
-                <Icon id="rating" />
-                <Link to="reviews" state={{ from: location }}>
-                  <span>{rating}</span>
-                  <span className={cl["reviews-number"]}>
-                    ({reviews.length}
-                    {reviews.length === 1 ? " Review" : " Reviews"})
-                  </span>
-                </Link>
-              </p>
-              <p className={cl.location}>
-                <Icon id="location" />
-                <span>{location}</span>
-              </p>
+            <div className={cl["content-wrapper"]}>
+              <h3 className={cl.name}>{name}</h3>
+              <div className={cl["info-wrapper"]}>
+                <p className={cl.rating}>
+                  <Icon id="rating" />
+                  <Link to="reviews" state={{ from: location }}>
+                    <span>{rating}</span>
+                    <span className={cl["reviews-number"]}>
+                      ({reviews.length}
+                      {reviews.length === 1 ? " Review" : " Reviews"})
+                    </span>
+                  </Link>
+                </p>
+                <p className={cl.location}>
+                  <Icon id="location" />
+                  <span>{location}</span>
+                </p>
+              </div>
+              <p className={cl.price}>€{price}</p>
             </div>
-            <p className={cl.price}>€{price}</p>
+
+            <ul className={cl["gallery-list"]}>
+              {gallery.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt={name}
+                  className={cl["gallery-item"]}
+                />
+              ))}
+            </ul>
+
+            <p className={cl.description}>{description}</p>
+
+            <div className={cl["links-wrapper"]}>
+              <NavLink
+                to="features"
+                className={({ isActive }) =>
+                  isActive ? `${cl.link} ${cl.active}` : cl.link
+                }
+                state={{ from: location }}
+              >
+                Features
+              </NavLink>
+              <NavLink
+                to="reviews"
+                className={({ isActive }) =>
+                  isActive ? `${cl.link} ${cl.active}` : cl.link
+                }
+                state={{ from: location }}
+              >
+                Reviews
+              </NavLink>
+            </div>
+
+            <Outlet />
           </div>
-
-          <ul className={cl["gallery-list"]}>
-            {gallery.map((img, index) => (
-              <img
-                key={index}
-                src={img}
-                alt={name}
-                className={cl["gallery-item"]}
-              />
-            ))}
-          </ul>
-
-          <p className={cl.description}>{description}</p>
-
-          <div className={cl["links-wrapper"]}>
-            <NavLink
-              to="features"
-              className={({ isActive }) =>
-                isActive ? `${cl.link} ${cl.active}` : cl.link
-              }
-              state={{ from: location }}
-            >
-              Features
-            </NavLink>
-            <NavLink
-              to="reviews"
-              className={({ isActive }) =>
-                isActive ? `${cl.link} ${cl.active}` : cl.link
-              }
-              state={{ from: location }}
-            >
-              Reviews
-            </NavLink>
-          </div>
-
-          <Outlet />
         </div>
       </div>,
       document.querySelector("#root-modal")

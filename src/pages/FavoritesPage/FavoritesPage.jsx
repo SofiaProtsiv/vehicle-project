@@ -7,7 +7,7 @@ const FavoritesPage = function () {
   const { favorites } = useSelector((state) => state.favorites);
 
   return (
-    <>
+    <section className={cl.section}>
       <ul className={cl["favorites-list"]}>
         {favorites.length ? (
           favorites?.map((vehicle) => (
@@ -19,7 +19,7 @@ const FavoritesPage = function () {
       </ul>
 
       <Outlet />
-    </>
+    </section>
   );
 };
 

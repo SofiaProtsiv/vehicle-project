@@ -3,6 +3,7 @@ import { Suspense } from "react";
 
 import Header from "../components/Header";
 import Container from "../components/UI/Container";
+import Loader from "components/UI/Loader";
 
 const Layout = function () {
   return (
@@ -10,7 +11,7 @@ const Layout = function () {
       <Header />
       <main>
         <Container>
-          <Suspense fallback={<div>Loading main content...</div>}>
+          <Suspense fallback={<Loader />}>
             <Outlet />
           </Suspense>
         </Container>

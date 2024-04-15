@@ -1,3 +1,8 @@
+.section {
+  @media (1440px<=width) {
+    padding-top: 135px;
+  }
+}
 .catalog-container {
   display: flex;
   flex-direction: column;
